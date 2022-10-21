@@ -129,3 +129,4 @@ extension DiffableCollectionViewController: UISearchBarDelegate {
         viewModel.requestSearchPhoto(query: searchBar.text ?? "")
     }
 }
+ 

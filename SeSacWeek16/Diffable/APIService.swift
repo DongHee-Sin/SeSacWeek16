@@ -27,9 +27,9 @@ final class APIService {
             let statusCode = response.response?.statusCode
             
             switch response.result {
-            case let .success(value):
+            case .success(let value):
                 completion(value, statusCode, nil)
-            case let .failure(error):
+            case .failure(let error):
                 completion(nil, statusCode, error)
             }
             

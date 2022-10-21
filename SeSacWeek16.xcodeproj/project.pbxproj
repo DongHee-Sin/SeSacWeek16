@@ -14,6 +14,9 @@
 		D03A1E5128FE2DB700B5CD2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03A1E5028FE2DB700B5CD2B /* Assets.xcassets */; };
 		D03A1E5428FE2DB700B5CD2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D03A1E5228FE2DB700B5CD2B /* LaunchScreen.storyboard */; };
 		D03A1E5D28FE390000B5CD2B /* SimpleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03A1E5C28FE390000B5CD2B /* SimpleCollectionViewController.swift */; };
+		D064C4E72902D23000A07762 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064C4E62902D23000A07762 /* ShoppingListViewController.swift */; };
+		D064C4E92902EDF400A07762 /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064C4E82902EDF400A07762 /* Shopping.swift */; };
+		D064C4EB2902EE8B00A07762 /* ShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064C4EA2902EE8B00A07762 /* ShoppingListViewModel.swift */; };
 		D071265B28FF9028001E6F56 /* DiffableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071265A28FF9028001E6F56 /* DiffableCollectionViewController.swift */; };
 		D078E2F02901009400BDB574 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D078E2EF2901009400BDB574 /* Alamofire */; };
 		D078E2F3290104D300BDB574 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078E2F2290104D300BDB574 /* APIService.swift */; };
@@ -38,6 +41,9 @@
 		D03A1E5328FE2DB700B5CD2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D03A1E5528FE2DB700B5CD2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D03A1E5C28FE390000B5CD2B /* SimpleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewController.swift; sourceTree = "<group>"; };
+		D064C4E62902D23000A07762 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		D064C4E82902EDF400A07762 /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
+		D064C4EA2902EE8B00A07762 /* ShoppingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewModel.swift; sourceTree = "<group>"; };
 		D071265A28FF9028001E6F56 /* DiffableCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableCollectionViewController.swift; sourceTree = "<group>"; };
 		D078E2F2290104D300BDB574 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		D078E2F42901057800BDB574 /* SearchPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhoto.swift; sourceTree = "<group>"; };
@@ -63,6 +69,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D012BD032902AE84005973A0 /* ShoppingList */ = {
+			isa = PBXGroup;
+			children = (
+				D064C4E62902D23000A07762 /* ShoppingListViewController.swift */,
+				D064C4EA2902EE8B00A07762 /* ShoppingListViewModel.swift */,
+				D064C4E82902EDF400A07762 /* Shopping.swift */,
+			);
+			path = ShoppingList;
+			sourceTree = "<group>";
+		};
 		D03A1E3B28FE2DB600B5CD2B = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +102,7 @@
 				D03A1E5B28FE2DDC00B5CD2B /* App */,
 				D0A596662900CF68001AA178 /* MVVMSample */,
 				D078E2F12901012200BDB574 /* Diffable */,
+				D012BD032902AE84005973A0 /* ShoppingList */,
 				D03A1E4D28FE2DB600B5CD2B /* Main.storyboard */,
 				D03A1E5028FE2DB700B5CD2B /* Assets.xcassets */,
 				D03A1E5228FE2DB700B5CD2B /* LaunchScreen.storyboard */,
@@ -212,12 +229,15 @@
 				D0A596682900CF8C001AA178 /* CObservable.swift in Sources */,
 				D071265B28FF9028001E6F56 /* DiffableCollectionViewController.swift in Sources */,
 				D03A1E5D28FE390000B5CD2B /* SimpleCollectionViewController.swift in Sources */,
+				D064C4E92902EDF400A07762 /* Shopping.swift in Sources */,
 				D0A5966E2900D781001AA178 /* News.swift in Sources */,
+				D064C4EB2902EE8B00A07762 /* ShoppingListViewModel.swift in Sources */,
 				D03A1E4C28FE2DB600B5CD2B /* SimpleTableViewController.swift in Sources */,
 				D078E2F92901073200BDB574 /* APIKeys.swift in Sources */,
 				D0A5966A2900D139001AA178 /* NewsViewController.swift in Sources */,
 				D078E2F3290104D300BDB574 /* APIService.swift in Sources */,
 				D03A1E4828FE2DB600B5CD2B /* AppDelegate.swift in Sources */,
+				D064C4E72902D23000A07762 /* ShoppingListViewController.swift in Sources */,
 				D03A1E4A28FE2DB600B5CD2B /* SceneDelegate.swift in Sources */,
 				D0A5966C2900D246001AA178 /* NewsViewModel.swift in Sources */,
 				D078E2FE29010B5700BDB574 /* DiffableViewModel.swift in Sources */,
