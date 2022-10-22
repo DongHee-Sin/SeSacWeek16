@@ -29,6 +29,7 @@
 		D0A5966A2900D139001AA178 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A596692900D139001AA178 /* NewsViewController.swift */; };
 		D0A5966C2900D246001AA178 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A5966B2900D246001AA178 /* NewsViewModel.swift */; };
 		D0A5966E2900D781001AA178 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A5966D2900D781001AA178 /* News.swift */; };
+		D0E9A2E82903D1950017E14A /* GetPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E9A2E72903D1950017E14A /* GetPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		D0A596692900D139001AA178 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		D0A5966B2900D246001AA178 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		D0A5966D2900D781001AA178 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		D0E9A2E72903D1950017E14A /* GetPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				D078E2FD29010B5700BDB574 /* DiffableViewModel.swift */,
 				D078E2F2290104D300BDB574 /* APIService.swift */,
 				D078E2F42901057800BDB574 /* SearchPhoto.swift */,
+				D0E9A2E72903D1950017E14A /* GetPhoto.swift */,
 			);
 			path = Diffable;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				D078E2F52901057800BDB574 /* SearchPhoto.swift in Sources */,
 				D0A596682900CF8C001AA178 /* CObservable.swift in Sources */,
+				D0E9A2E82903D1950017E14A /* GetPhoto.swift in Sources */,
 				D071265B28FF9028001E6F56 /* DiffableCollectionViewController.swift in Sources */,
 				D03A1E5D28FE390000B5CD2B /* SimpleCollectionViewController.swift in Sources */,
 				D064C4E92902EDF400A07762 /* Shopping.swift in Sources */,

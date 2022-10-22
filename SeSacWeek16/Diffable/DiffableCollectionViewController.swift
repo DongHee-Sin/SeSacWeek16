@@ -112,10 +112,26 @@ extension DiffableCollectionViewController {
 extension DiffableCollectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        // id
+        let id = viewModel.fetchPhotoID(at: indexPath.item)
+        APIService.getPhoto(id: id) { photo, statusCode, error in
+            if let error {
+                print(error.localizedDescription)
+                print("\(statusCode)")
+            }
+            
+            if let photo {
+                print("SUCCESS --")
+            }
+        }
+        
+        
         guard let item = dataSource.itemIdentifier(for: indexPath) else { return }
         
         let alert = UIAlertController(title: "좋아요 수", message: "\(item.likes)개", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "확인", style: .cancel))
+        
         present(alert, animated: true)
     }
 }
