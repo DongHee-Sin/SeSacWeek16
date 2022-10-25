@@ -23,7 +23,11 @@ final class RxCocoaExampleViewController: UIViewController {
     @IBOutlet weak var signEmail: UITextField!
     @IBOutlet weak var signButton: UIButton!
     
-    private let disposeBag = DisposeBag()
+    @IBOutlet weak var nicknameLabel: UILabel!
+    
+    private var disposeBag = DisposeBag()
+    
+    private var nickname = Observable.just("Jack")
     
     
     
@@ -37,6 +41,19 @@ final class RxCocoaExampleViewController: UIViewController {
         setSwitch()
         setSign()
         setOperator()
+        
+//        nickname
+//            .bind(to: nicknameLabel.rx.text)
+//            .disposed(by: disposeBag)
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//            self.nickname = "Hello"
+//        }
+    }
+    
+    // ViewController가 deinit 되면, 알아서 disposed도 동작한다.
+    deinit {
+        print("RXCocoaExampleViewController DEINIT!!!")
     }
     
     
@@ -62,8 +79,13 @@ final class RxCocoaExampleViewController: UIViewController {
         
         
         // Infinite Observable Sequences
-        tableView.rx.modelSelected(String.self)
-            .map { "\($0) 를 클릭했습니다." }
+//        tableView.rx.modelSelected(String.self)
+//            .map { "\($0) 를 클릭했습니다." }
+//            .bind(to: label.rx.text)
+//            .disposed(by: disposeBag)
+        
+        tableView.rx.modelDeselected(String.self)
+            .map { "\($0) 선택 해제" }
             .bind(to: label.rx.text)
             .disposed(by: disposeBag)
         
@@ -95,7 +117,7 @@ final class RxCocoaExampleViewController: UIViewController {
      
         items
             .bind(to: pickerView.rx.itemTitles) { (row, element) in
-                return element
+                return "\(row+1) : \(element)"
             }
             .disposed(by: disposeBag)
         
@@ -135,7 +157,6 @@ final class RxCocoaExampleViewController: UIViewController {
             .bind(to: signEmail.rx.isHidden, signButton.rx.isHidden)
             .disposed(by: disposeBag)
         
-        
         signEmail
             .rx
             .text
@@ -148,8 +169,9 @@ final class RxCocoaExampleViewController: UIViewController {
         signButton
             .rx
             .tap
-            .subscribe { _ in    // 왜 subscribe쓰지? : 반환값이 Void라서 bind를 굳이 사용할 필요 없음
-                self.showAlert()                   // bind는 나온 데이터를 어딘가에 할당(?)해주는 느낌..?
+            .withUnretained(self)
+            .subscribe { vc, _ in    // 왜 subscribe쓰지? : 반환값이 Void라서 bind를 굳이 사용할 필요 없음
+                vc.showAlert()                   // bind는 나온 데이터를 어딘가에 할당(?)해주는 느낌..?
             }
             .disposed(by: disposeBag)
     }
@@ -158,7 +180,7 @@ final class RxCocoaExampleViewController: UIViewController {
     // MARK: - Operator
     private func setOperator() {
         
-        Observable.repeatElement("Jack")      // 반복
+        Observable.repeatElement("Jack")      // 반복 (Infinite Obserable Sequence)
             .take(5)                          // 반복 횟수 제한
             .subscribe { value in
                 print("just - \(value)")
@@ -172,7 +194,9 @@ final class RxCocoaExampleViewController: UIViewController {
             .disposed(by: disposeBag)
         
         
-        let intervalObservable = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
+        
+        // 무한 시퀸스
+        Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
             .subscribe { value in
                 print("interval - \(value)")
             } onError: { error in
@@ -182,11 +206,7 @@ final class RxCocoaExampleViewController: UIViewController {
             } onDisposed: {
                 print("interval disposed")
             }
-            //.disposed(by: disposeBag)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            intervalObservable.dispose()
-        }
+            .disposed(by: disposeBag)
         
         
         
@@ -208,7 +228,7 @@ final class RxCocoaExampleViewController: UIViewController {
 
         Observable.of(itemsA, itemsB)        // of : 가변매개변수 사용
             .subscribe { value in
-                print("of - \(value)")
+                print("of - \(value)")       // 가변 매개변수로 입력된 개수만큼 실행
             } onError: { error in
                 print("of - \(error)")
             } onCompleted: {

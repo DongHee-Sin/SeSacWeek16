@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D035FB4D29077A4900D4726F /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035FB4C29077A4900D4726F /* SubjectViewController.swift */; };
+		D035FB4F290788A600D4726F /* SubjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035FB4E290788A600D4726F /* SubjectViewModel.swift */; };
 		D03A1E4828FE2DB600B5CD2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03A1E4728FE2DB600B5CD2B /* AppDelegate.swift */; };
 		D03A1E4A28FE2DB600B5CD2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03A1E4928FE2DB600B5CD2B /* SceneDelegate.swift */; };
 		D03A1E4C28FE2DB600B5CD2B /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03A1E4B28FE2DB600B5CD2B /* SimpleTableViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D035FB4C29077A4900D4726F /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
+		D035FB4E290788A600D4726F /* SubjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewModel.swift; sourceTree = "<group>"; };
 		D03A1E4428FE2DB600B5CD2B /* SeSacWeek16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSacWeek16.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03A1E4728FE2DB600B5CD2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D03A1E4928FE2DB600B5CD2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				D098DF3C290625C2004452D9 /* RxCocoaExampleViewController.swift */,
+				D035FB4C29077A4900D4726F /* SubjectViewController.swift */,
+				D035FB4E290788A600D4726F /* SubjectViewModel.swift */,
 			);
 			path = RX;
 			sourceTree = "<group>";
@@ -247,10 +253,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D078E2F52901057800BDB574 /* SearchPhoto.swift in Sources */,
+				D035FB4F290788A600D4726F /* SubjectViewModel.swift in Sources */,
 				D098DF3D290625C2004452D9 /* RxCocoaExampleViewController.swift in Sources */,
 				D0A596682900CF8C001AA178 /* CObservable.swift in Sources */,
 				D0E9A2E82903D1950017E14A /* GetPhoto.swift in Sources */,
 				D071265B28FF9028001E6F56 /* DiffableCollectionViewController.swift in Sources */,
+				D035FB4D29077A4900D4726F /* SubjectViewController.swift in Sources */,
 				D03A1E5D28FE390000B5CD2B /* SimpleCollectionViewController.swift in Sources */,
 				D064C4E92902EDF400A07762 /* Shopping.swift in Sources */,
 				D0A5966E2900D781001AA178 /* News.swift in Sources */,
