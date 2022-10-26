@@ -38,6 +38,8 @@
 		D08CC0E12909718900319092 /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC0E02909718900319092 /* ValidationViewController.swift */; };
 		D08CC0E32909733900319092 /* ValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC0E22909733900319092 /* ValidationView.swift */; };
 		D08CC0E62909739F00319092 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D08CC0E52909739F00319092 /* Then */; };
+		D08CC0E8290995D100319092 /* RXTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC0E7290995D100319092 /* RXTableViewController.swift */; };
+		D08CC0EA290995EF00319092 /* RXTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC0E9290995EF00319092 /* RXTableView.swift */; };
 		D098DF38290622B7004452D9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D098DF37290622B7004452D9 /* RxCocoa */; };
 		D098DF3A290622B7004452D9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D098DF39290622B7004452D9 /* RxSwift */; };
 		D098DF3D290625C2004452D9 /* RxCocoaExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098DF3C290625C2004452D9 /* RxCocoaExampleViewController.swift */; };
@@ -46,6 +48,7 @@
 		D0A5966C2900D246001AA178 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A5966B2900D246001AA178 /* NewsViewModel.swift */; };
 		D0A5966E2900D781001AA178 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A5966D2900D781001AA178 /* News.swift */; };
 		D0DC524C2908CBB6003D7B6F /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DC524B2908CBB6003D7B6F /* SubscribeViewController.swift */; };
+		D0E18B2629099C4A00C53718 /* RXUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E18B2529099C4A00C53718 /* RXUser.swift */; };
 		D0E9A2E82903D1950017E14A /* GetPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E9A2E72903D1950017E14A /* GetPhoto.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,12 +82,15 @@
 		D08CC0DE2909677300319092 /* RXNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXNumberViewModel.swift; sourceTree = "<group>"; };
 		D08CC0E02909718900319092 /* ValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
 		D08CC0E22909733900319092 /* ValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationView.swift; sourceTree = "<group>"; };
+		D08CC0E7290995D100319092 /* RXTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXTableViewController.swift; sourceTree = "<group>"; };
+		D08CC0E9290995EF00319092 /* RXTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXTableView.swift; sourceTree = "<group>"; };
 		D098DF3C290625C2004452D9 /* RxCocoaExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCocoaExampleViewController.swift; sourceTree = "<group>"; };
 		D0A596672900CF8C001AA178 /* CObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CObservable.swift; sourceTree = "<group>"; };
 		D0A596692900D139001AA178 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		D0A5966B2900D246001AA178 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		D0A5966D2900D781001AA178 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		D0DC524B2908CBB6003D7B6F /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
+		D0E18B2529099C4A00C53718 /* RXUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXUser.swift; sourceTree = "<group>"; };
 		D0E9A2E72903D1950017E14A /* GetPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +238,9 @@
 		D0831AB229091A740010D478 /* SimpleTableView */ = {
 			isa = PBXGroup;
 			children = (
+				D08CC0E7290995D100319092 /* RXTableViewController.swift */,
+				D08CC0E9290995EF00319092 /* RXTableView.swift */,
+				D0E18B2529099C4A00C53718 /* RXUser.swift */,
 			);
 			path = SimpleTableView;
 			sourceTree = "<group>";
@@ -381,15 +390,18 @@
 				D078E2F92901073200BDB574 /* APIKeys.swift in Sources */,
 				D0831AB0290919F70010D478 /* BaseView.swift in Sources */,
 				D08CC0DF2909677300319092 /* RXNumberViewModel.swift in Sources */,
+				D08CC0E8290995D100319092 /* RXTableViewController.swift in Sources */,
 				D0A5966A2900D139001AA178 /* NewsViewController.swift in Sources */,
 				D078E2F3290104D300BDB574 /* APIService.swift in Sources */,
 				D03A1E4828FE2DB600B5CD2B /* AppDelegate.swift in Sources */,
 				D0831AAE290919DC0010D478 /* SimplePickerView.swift in Sources */,
 				D0831AB929091CD70010D478 /* BaseViewController.swift in Sources */,
+				D08CC0EA290995EF00319092 /* RXTableView.swift in Sources */,
 				D0831ABC290928140010D478 /* RXNumbersViewController.swift in Sources */,
 				D064C4E72902D23000A07762 /* ShoppingListViewController.swift in Sources */,
 				D03A1E4A28FE2DB600B5CD2B /* SceneDelegate.swift in Sources */,
 				D08CC0E32909733900319092 /* ValidationView.swift in Sources */,
+				D0E18B2629099C4A00C53718 /* RXUser.swift in Sources */,
 				D0A5966C2900D246001AA178 /* NewsViewModel.swift in Sources */,
 				D078E2FE29010B5700BDB574 /* DiffableViewModel.swift in Sources */,
 			);
@@ -546,7 +558,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,7 +590,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
