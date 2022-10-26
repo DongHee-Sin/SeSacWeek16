@@ -35,6 +35,9 @@
 		D0831ABC290928140010D478 /* RXNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831ABB290928140010D478 /* RXNumbersViewController.swift */; };
 		D0831ABE290928580010D478 /* RXNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831ABD290928580010D478 /* RXNumbersView.swift */; };
 		D08CC0DF2909677300319092 /* RXNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC0DE2909677300319092 /* RXNumberViewModel.swift */; };
+		D08CC0E12909718900319092 /* ValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC0E02909718900319092 /* ValidationViewController.swift */; };
+		D08CC0E32909733900319092 /* ValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC0E22909733900319092 /* ValidationView.swift */; };
+		D08CC0E62909739F00319092 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D08CC0E52909739F00319092 /* Then */; };
 		D098DF38290622B7004452D9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D098DF37290622B7004452D9 /* RxCocoa */; };
 		D098DF3A290622B7004452D9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D098DF39290622B7004452D9 /* RxSwift */; };
 		D098DF3D290625C2004452D9 /* RxCocoaExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098DF3C290625C2004452D9 /* RxCocoaExampleViewController.swift */; };
@@ -74,6 +77,8 @@
 		D0831ABB290928140010D478 /* RXNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXNumbersViewController.swift; sourceTree = "<group>"; };
 		D0831ABD290928580010D478 /* RXNumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXNumbersView.swift; sourceTree = "<group>"; };
 		D08CC0DE2909677300319092 /* RXNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXNumberViewModel.swift; sourceTree = "<group>"; };
+		D08CC0E02909718900319092 /* ValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationViewController.swift; sourceTree = "<group>"; };
+		D08CC0E22909733900319092 /* ValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationView.swift; sourceTree = "<group>"; };
 		D098DF3C290625C2004452D9 /* RxCocoaExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCocoaExampleViewController.swift; sourceTree = "<group>"; };
 		D0A596672900CF8C001AA178 /* CObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CObservable.swift; sourceTree = "<group>"; };
 		D0A596692900D139001AA178 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D098DF38290622B7004452D9 /* RxCocoa in Frameworks */,
+				D08CC0E62909739F00319092 /* Then in Frameworks */,
 				D078E2FC29010B3700BDB574 /* Kingfisher in Frameworks */,
 				D098DF3A290622B7004452D9 /* RxSwift in Frameworks */,
 				D078E2F02901009400BDB574 /* Alamofire in Frameworks */,
@@ -233,6 +239,8 @@
 		D0831AB329091A760010D478 /* SimpleValidationView */ = {
 			isa = PBXGroup;
 			children = (
+				D08CC0E02909718900319092 /* ValidationViewController.swift */,
+				D08CC0E22909733900319092 /* ValidationView.swift */,
 			);
 			path = SimpleValidationView;
 			sourceTree = "<group>";
@@ -289,6 +297,7 @@
 				D098DF37290622B7004452D9 /* RxCocoa */,
 				D098DF39290622B7004452D9 /* RxSwift */,
 				D0831AB529091AB70010D478 /* SnapKit */,
+				D08CC0E52909739F00319092 /* Then */,
 			);
 			productName = SeSacWeek16;
 			productReference = D03A1E4428FE2DB600B5CD2B /* SeSacWeek16.app */;
@@ -323,6 +332,7 @@
 				D078E2FA29010B3700BDB574 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				D098DF36290622B7004452D9 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				D0831AB429091AB70010D478 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D08CC0E42909739F00319092 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = D03A1E4528FE2DB600B5CD2B /* Products */;
 			projectDirPath = "";
@@ -354,6 +364,7 @@
 			files = (
 				D078E2F52901057800BDB574 /* SearchPhoto.swift in Sources */,
 				D035FB4F290788A600D4726F /* SubjectViewModel.swift in Sources */,
+				D08CC0E12909718900319092 /* ValidationViewController.swift in Sources */,
 				D098DF3D290625C2004452D9 /* RxCocoaExampleViewController.swift in Sources */,
 				D0DC524C2908CBB6003D7B6F /* SubscribeViewController.swift in Sources */,
 				D0A596682900CF8C001AA178 /* CObservable.swift in Sources */,
@@ -378,6 +389,7 @@
 				D0831ABC290928140010D478 /* RXNumbersViewController.swift in Sources */,
 				D064C4E72902D23000A07762 /* ShoppingListViewController.swift in Sources */,
 				D03A1E4A28FE2DB600B5CD2B /* SceneDelegate.swift in Sources */,
+				D08CC0E32909733900319092 /* ValidationView.swift in Sources */,
 				D0A5966C2900D246001AA178 /* NewsViewModel.swift in Sources */,
 				D078E2FE29010B5700BDB574 /* DiffableViewModel.swift in Sources */,
 			);
@@ -631,6 +643,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		D08CC0E42909739F00319092 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		D098DF36290622B7004452D9 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -656,6 +676,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D0831AB429091AB70010D478 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		D08CC0E52909739F00319092 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D08CC0E42909739F00319092 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 		D098DF37290622B7004452D9 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
