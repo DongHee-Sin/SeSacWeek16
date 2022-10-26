@@ -27,6 +27,11 @@
 		D078E2F92901073200BDB574 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078E2F82901073200BDB574 /* APIKeys.swift */; };
 		D078E2FC29010B3700BDB574 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D078E2FB29010B3700BDB574 /* Kingfisher */; };
 		D078E2FE29010B5700BDB574 /* DiffableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078E2FD29010B5700BDB574 /* DiffableViewModel.swift */; };
+		D0831AAC290919C10010D478 /* SimplePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831AAB290919C10010D478 /* SimplePickerViewController.swift */; };
+		D0831AAE290919DC0010D478 /* SimplePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831AAD290919DC0010D478 /* SimplePickerView.swift */; };
+		D0831AB0290919F70010D478 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831AAF290919F70010D478 /* BaseView.swift */; };
+		D0831AB629091AB70010D478 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0831AB529091AB70010D478 /* SnapKit */; };
+		D0831AB929091CD70010D478 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831AB829091CD70010D478 /* BaseViewController.swift */; };
 		D098DF38290622B7004452D9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D098DF37290622B7004452D9 /* RxCocoa */; };
 		D098DF3A290622B7004452D9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D098DF39290622B7004452D9 /* RxSwift */; };
 		D098DF3D290625C2004452D9 /* RxCocoaExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098DF3C290625C2004452D9 /* RxCocoaExampleViewController.swift */; };
@@ -59,6 +64,10 @@
 		D078E2F6290106FE00BDB574 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D078E2F82901073200BDB574 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		D078E2FD29010B5700BDB574 /* DiffableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewModel.swift; sourceTree = "<group>"; };
+		D0831AAB290919C10010D478 /* SimplePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePickerViewController.swift; sourceTree = "<group>"; };
+		D0831AAD290919DC0010D478 /* SimplePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePickerView.swift; sourceTree = "<group>"; };
+		D0831AAF290919F70010D478 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D0831AB829091CD70010D478 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D098DF3C290625C2004452D9 /* RxCocoaExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCocoaExampleViewController.swift; sourceTree = "<group>"; };
 		D0A596672900CF8C001AA178 /* CObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CObservable.swift; sourceTree = "<group>"; };
 		D0A596692900D139001AA178 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +86,7 @@
 				D078E2FC29010B3700BDB574 /* Kingfisher in Frameworks */,
 				D098DF3A290622B7004452D9 /* RxSwift in Frameworks */,
 				D078E2F02901009400BDB574 /* Alamofire in Frameworks */,
+				D0831AB629091AB70010D478 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,8 +123,10 @@
 		D03A1E4628FE2DB600B5CD2B /* SeSacWeek16 */ = {
 			isa = PBXGroup;
 			children = (
-				D098DF3B290625A8004452D9 /* RX */,
 				D03A1E5B28FE2DDC00B5CD2B /* App */,
+				D0831ABA290921460010D478 /* Base */,
+				D0831AA9290919930010D478 /* RXSample */,
+				D098DF3B290625A8004452D9 /* RX */,
 				D0A596662900CF68001AA178 /* MVVMSample */,
 				D078E2F12901012200BDB574 /* Diffable */,
 				D012BD032902AE84005973A0 /* ShoppingList */,
@@ -175,6 +187,56 @@
 			path = RXCocoa;
 			sourceTree = "<group>";
 		};
+		D0831AA9290919930010D478 /* RXSample */ = {
+			isa = PBXGroup;
+			children = (
+				D0831AAA290919B10010D478 /* SimplePicker */,
+				D0831AB129091A630010D478 /* Numbers */,
+				D0831AB329091A760010D478 /* SimpleValidationView */,
+				D0831AB229091A740010D478 /* SimpleTableView */,
+			);
+			path = RXSample;
+			sourceTree = "<group>";
+		};
+		D0831AAA290919B10010D478 /* SimplePicker */ = {
+			isa = PBXGroup;
+			children = (
+				D0831AAB290919C10010D478 /* SimplePickerViewController.swift */,
+				D0831AAD290919DC0010D478 /* SimplePickerView.swift */,
+			);
+			path = SimplePicker;
+			sourceTree = "<group>";
+		};
+		D0831AB129091A630010D478 /* Numbers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Numbers;
+			sourceTree = "<group>";
+		};
+		D0831AB229091A740010D478 /* SimpleTableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SimpleTableView;
+			sourceTree = "<group>";
+		};
+		D0831AB329091A760010D478 /* SimpleValidationView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SimpleValidationView;
+			sourceTree = "<group>";
+		};
+		D0831ABA290921460010D478 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D0831AB829091CD70010D478 /* BaseViewController.swift */,
+				D0831AAF290919F70010D478 /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		D098DF3B290625A8004452D9 /* RX */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +279,7 @@
 				D078E2FB29010B3700BDB574 /* Kingfisher */,
 				D098DF37290622B7004452D9 /* RxCocoa */,
 				D098DF39290622B7004452D9 /* RxSwift */,
+				D0831AB529091AB70010D478 /* SnapKit */,
 			);
 			productName = SeSacWeek16;
 			productReference = D03A1E4428FE2DB600B5CD2B /* SeSacWeek16.app */;
@@ -250,6 +313,7 @@
 				D078E2EE2901009400BDB574 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D078E2FA29010B3700BDB574 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				D098DF36290622B7004452D9 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				D0831AB429091AB70010D478 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = D03A1E4528FE2DB600B5CD2B /* Products */;
 			projectDirPath = "";
@@ -285,6 +349,7 @@
 				D0DC524C2908CBB6003D7B6F /* SubscribeViewController.swift in Sources */,
 				D0A596682900CF8C001AA178 /* CObservable.swift in Sources */,
 				D0E9A2E82903D1950017E14A /* GetPhoto.swift in Sources */,
+				D0831AAC290919C10010D478 /* SimplePickerViewController.swift in Sources */,
 				D071265B28FF9028001E6F56 /* DiffableCollectionViewController.swift in Sources */,
 				D035FB4D29077A4900D4726F /* SubjectViewController.swift in Sources */,
 				D03A1E5D28FE390000B5CD2B /* SimpleCollectionViewController.swift in Sources */,
@@ -293,9 +358,12 @@
 				D064C4EB2902EE8B00A07762 /* ShoppingListViewModel.swift in Sources */,
 				D03A1E4C28FE2DB600B5CD2B /* SimpleTableViewController.swift in Sources */,
 				D078E2F92901073200BDB574 /* APIKeys.swift in Sources */,
+				D0831AB0290919F70010D478 /* BaseView.swift in Sources */,
 				D0A5966A2900D139001AA178 /* NewsViewController.swift in Sources */,
 				D078E2F3290104D300BDB574 /* APIService.swift in Sources */,
 				D03A1E4828FE2DB600B5CD2B /* AppDelegate.swift in Sources */,
+				D0831AAE290919DC0010D478 /* SimplePickerView.swift in Sources */,
+				D0831AB929091CD70010D478 /* BaseViewController.swift in Sources */,
 				D064C4E72902D23000A07762 /* ShoppingListViewController.swift in Sources */,
 				D03A1E4A28FE2DB600B5CD2B /* SceneDelegate.swift in Sources */,
 				D0A5966C2900D246001AA178 /* NewsViewModel.swift in Sources */,
@@ -543,6 +611,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		D0831AB429091AB70010D478 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		D098DF36290622B7004452D9 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -563,6 +639,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D078E2FA29010B3700BDB574 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		D0831AB529091AB70010D478 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0831AB429091AB70010D478 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 		D098DF37290622B7004452D9 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
