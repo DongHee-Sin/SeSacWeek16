@@ -32,6 +32,9 @@
 		D0831AB0290919F70010D478 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831AAF290919F70010D478 /* BaseView.swift */; };
 		D0831AB629091AB70010D478 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0831AB529091AB70010D478 /* SnapKit */; };
 		D0831AB929091CD70010D478 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831AB829091CD70010D478 /* BaseViewController.swift */; };
+		D0831ABC290928140010D478 /* RXNumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831ABB290928140010D478 /* RXNumbersViewController.swift */; };
+		D0831ABE290928580010D478 /* RXNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0831ABD290928580010D478 /* RXNumbersView.swift */; };
+		D08CC0DF2909677300319092 /* RXNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08CC0DE2909677300319092 /* RXNumberViewModel.swift */; };
 		D098DF38290622B7004452D9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D098DF37290622B7004452D9 /* RxCocoa */; };
 		D098DF3A290622B7004452D9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D098DF39290622B7004452D9 /* RxSwift */; };
 		D098DF3D290625C2004452D9 /* RxCocoaExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D098DF3C290625C2004452D9 /* RxCocoaExampleViewController.swift */; };
@@ -68,6 +71,9 @@
 		D0831AAD290919DC0010D478 /* SimplePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePickerView.swift; sourceTree = "<group>"; };
 		D0831AAF290919F70010D478 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D0831AB829091CD70010D478 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D0831ABB290928140010D478 /* RXNumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXNumbersViewController.swift; sourceTree = "<group>"; };
+		D0831ABD290928580010D478 /* RXNumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXNumbersView.swift; sourceTree = "<group>"; };
+		D08CC0DE2909677300319092 /* RXNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXNumberViewModel.swift; sourceTree = "<group>"; };
 		D098DF3C290625C2004452D9 /* RxCocoaExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCocoaExampleViewController.swift; sourceTree = "<group>"; };
 		D0A596672900CF8C001AA178 /* CObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CObservable.swift; sourceTree = "<group>"; };
 		D0A596692900D139001AA178 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +216,9 @@
 		D0831AB129091A630010D478 /* Numbers */ = {
 			isa = PBXGroup;
 			children = (
+				D0831ABB290928140010D478 /* RXNumbersViewController.swift */,
+				D0831ABD290928580010D478 /* RXNumbersView.swift */,
+				D08CC0DE2909677300319092 /* RXNumberViewModel.swift */,
 			);
 			path = Numbers;
 			sourceTree = "<group>";
@@ -350,6 +359,7 @@
 				D0A596682900CF8C001AA178 /* CObservable.swift in Sources */,
 				D0E9A2E82903D1950017E14A /* GetPhoto.swift in Sources */,
 				D0831AAC290919C10010D478 /* SimplePickerViewController.swift in Sources */,
+				D0831ABE290928580010D478 /* RXNumbersView.swift in Sources */,
 				D071265B28FF9028001E6F56 /* DiffableCollectionViewController.swift in Sources */,
 				D035FB4D29077A4900D4726F /* SubjectViewController.swift in Sources */,
 				D03A1E5D28FE390000B5CD2B /* SimpleCollectionViewController.swift in Sources */,
@@ -359,11 +369,13 @@
 				D03A1E4C28FE2DB600B5CD2B /* SimpleTableViewController.swift in Sources */,
 				D078E2F92901073200BDB574 /* APIKeys.swift in Sources */,
 				D0831AB0290919F70010D478 /* BaseView.swift in Sources */,
+				D08CC0DF2909677300319092 /* RXNumberViewModel.swift in Sources */,
 				D0A5966A2900D139001AA178 /* NewsViewController.swift in Sources */,
 				D078E2F3290104D300BDB574 /* APIService.swift in Sources */,
 				D03A1E4828FE2DB600B5CD2B /* AppDelegate.swift in Sources */,
 				D0831AAE290919DC0010D478 /* SimplePickerView.swift in Sources */,
 				D0831AB929091CD70010D478 /* BaseViewController.swift in Sources */,
+				D0831ABC290928140010D478 /* RXNumbersViewController.swift in Sources */,
 				D064C4E72902D23000A07762 /* ShoppingListViewController.swift in Sources */,
 				D03A1E4A28FE2DB600B5CD2B /* SceneDelegate.swift in Sources */,
 				D0A5966C2900D246001AA178 /* NewsViewModel.swift in Sources */,
