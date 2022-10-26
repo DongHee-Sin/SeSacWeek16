@@ -34,6 +34,7 @@
 		D0A5966A2900D139001AA178 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A596692900D139001AA178 /* NewsViewController.swift */; };
 		D0A5966C2900D246001AA178 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A5966B2900D246001AA178 /* NewsViewModel.swift */; };
 		D0A5966E2900D781001AA178 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A5966D2900D781001AA178 /* News.swift */; };
+		D0DC524C2908CBB6003D7B6F /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DC524B2908CBB6003D7B6F /* SubscribeViewController.swift */; };
 		D0E9A2E82903D1950017E14A /* GetPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E9A2E72903D1950017E14A /* GetPhoto.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		D0A596692900D139001AA178 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		D0A5966B2900D246001AA178 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		D0A5966D2900D781001AA178 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		D0DC524B2908CBB6003D7B6F /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
 		D0E9A2E72903D1950017E14A /* GetPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,12 +150,37 @@
 			path = Diffable;
 			sourceTree = "<group>";
 		};
-		D098DF3B290625A8004452D9 /* RX */ = {
+		D0831AA6290912BA0010D478 /* Subject */ = {
+			isa = PBXGroup;
+			children = (
+				D035FB4C29077A4900D4726F /* SubjectViewController.swift */,
+				D035FB4E290788A600D4726F /* SubjectViewModel.swift */,
+			);
+			path = Subject;
+			sourceTree = "<group>";
+		};
+		D0831AA7290912C90010D478 /* Subscribe */ = {
+			isa = PBXGroup;
+			children = (
+				D0DC524B2908CBB6003D7B6F /* SubscribeViewController.swift */,
+			);
+			path = Subscribe;
+			sourceTree = "<group>";
+		};
+		D0831AA8290912E50010D478 /* RXCocoa */ = {
 			isa = PBXGroup;
 			children = (
 				D098DF3C290625C2004452D9 /* RxCocoaExampleViewController.swift */,
-				D035FB4C29077A4900D4726F /* SubjectViewController.swift */,
-				D035FB4E290788A600D4726F /* SubjectViewModel.swift */,
+			);
+			path = RXCocoa;
+			sourceTree = "<group>";
+		};
+		D098DF3B290625A8004452D9 /* RX */ = {
+			isa = PBXGroup;
+			children = (
+				D0831AA8290912E50010D478 /* RXCocoa */,
+				D0831AA6290912BA0010D478 /* Subject */,
+				D0831AA7290912C90010D478 /* Subscribe */,
 			);
 			path = RX;
 			sourceTree = "<group>";
@@ -255,6 +282,7 @@
 				D078E2F52901057800BDB574 /* SearchPhoto.swift in Sources */,
 				D035FB4F290788A600D4726F /* SubjectViewModel.swift in Sources */,
 				D098DF3D290625C2004452D9 /* RxCocoaExampleViewController.swift in Sources */,
+				D0DC524C2908CBB6003D7B6F /* SubscribeViewController.swift in Sources */,
 				D0A596682900CF8C001AA178 /* CObservable.swift in Sources */,
 				D0E9A2E82903D1950017E14A /* GetPhoto.swift in Sources */,
 				D071265B28FF9028001E6F56 /* DiffableCollectionViewController.swift in Sources */,

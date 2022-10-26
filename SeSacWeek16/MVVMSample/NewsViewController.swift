@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 
 final class NewsViewController: UIViewController {
@@ -20,6 +22,8 @@ final class NewsViewController: UIViewController {
     @IBOutlet weak var loadButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
     
+    private var disposeBag = DisposeBag()
+    
     
     
     
@@ -29,7 +33,7 @@ final class NewsViewController: UIViewController {
         
         configureHierachy()
         configureDataSource()
-        bind()
+        bindData()
         addTarget()
     }
     
@@ -39,22 +43,51 @@ final class NewsViewController: UIViewController {
     // MARK: - Methdos
     private func addTarget() {
         numberTextField.addTarget(self, action: #selector(numberTextFieldChanged), for: .editingChanged)
-        loadButton.addTarget(self, action: #selector(loadButtonTapped), for: .touchUpInside)
-        resetButton.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
+        
+        //loadButton.addTarget(self, action: #selector(loadButtonTapped), for: .touchUpInside)
+        //resetButton.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
     }
     
     
-    private func bind() {
-        viewModel.pageNumber.bind { value in
-            self.numberTextField.text = value
-        }
+    private func bindData() {
+//        viewModel.pageNumber.bind { value in
+//            self.numberTextField.text = value
+//        }
+//
+//        viewModel.news.bind { items in
+//            var snapshot = NSDiffableDataSourceSnapshot<Int, News.NewsItem>()
+//            snapshot.appendSections([0])
+//            snapshot.appendItems(items)
+//            self.dataSource.apply(snapshot, animatingDifferences: false)   // dataSource 프로퍼티 초기화 후 실행해야 함
+//        }
         
-        viewModel.news.bind { items in
-            var snapshot = NSDiffableDataSourceSnapshot<Int, News.NewsItem>()
-            snapshot.appendSections([0])
-            snapshot.appendItems(items)
-            self.dataSource.apply(snapshot, animatingDifferences: false)   // dataSource 프로퍼티 초기화 후 실행해야 함
-        }
+        // ViewModel의 데이터를 bind
+        viewModel.news
+            .withUnretained(self)
+            .bind { (vc, item) in
+                var snapshot = NSDiffableDataSourceSnapshot<Int, News.NewsItem>()
+                snapshot.appendSections([0])
+                snapshot.appendItems(item)
+                vc.dataSource.apply(snapshot, animatingDifferences: false)
+            }
+            .disposed(by: disposeBag)
+        
+        
+        // loadButton의 터치 이벤트를 bind (기존의 addTarget)
+        loadButton.rx.tap
+            .withUnretained(self)
+            .bind { (vc, _) in
+                vc.viewModel.loadNews()
+            }
+            .disposed(by: disposeBag)
+        
+        // resetButton의 터치 이벤트를 bind (기존의 addTarget)
+        resetButton.rx.tap
+            .withUnretained(self)
+            .bind { (vc, _) in
+                vc.viewModel.resetNews()
+            }
+            .disposed(by: disposeBag)
     }
     
     
@@ -67,14 +100,14 @@ final class NewsViewController: UIViewController {
     }
     
     
-    @objc private func loadButtonTapped() {
-        viewModel.loadNews()
-    }
-    
-    
-    @objc private func resetButtonTapped() {
-        viewModel.resetNews()
-    }
+//    @objc private func loadButtonTapped() {
+//        viewModel.loadNews()
+//    }
+//
+//
+//    @objc private func resetButtonTapped() {
+//        viewModel.resetNews()
+//    }
 }
 
 

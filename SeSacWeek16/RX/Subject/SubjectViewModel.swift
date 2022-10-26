@@ -25,6 +25,7 @@ final class SubjectViewModel {
         Contact(name: "Real Jack", age: 25, number: "01012345678")
     ]
     
+    // Relay로 변경해도 된다. => onNext만 사용함..
     var list = PublishSubject<[Contact]>()
     
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k8g-kh-AWc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RxR-k3-VPJ">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -70,7 +70,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrf-8q-hdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="4"/>
+            <point key="canvasLocation" x="1745" y="4"/>
         </scene>
         <!--Diffable Collection View Controller-->
         <scene sceneID="S32-99-uUg">
@@ -86,9 +86,6 @@
                                     <constraint firstAttribute="height" constant="44" id="JlL-oV-bcu"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="RxR-k3-VPJ" id="j1J-tJ-7sA"/>
-                                </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="56n-Fm-yRG">
                                 <rect key="frame" x="0.0" y="111" width="390" height="699"/>
@@ -125,12 +122,47 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="56n-Fm-yRG" id="xY5-eT-Dyk"/>
-                        <outlet property="searchBar" destination="aTc-ko-phh" id="KAA-Km-vbH"/>
+                        <outlet property="searchBar" destination="aTc-ko-phh" id="Imb-3g-roe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uot-IK-gQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2689" y="4"/>
+            <point key="canvasLocation" x="2598" y="4"/>
+        </scene>
+        <!--Subscribe View Controller-->
+        <scene sceneID="50p-ae-LmY">
+            <objects>
+                <viewController storyboardIdentifier="SubscribeViewController" id="LU5-Cm-dn1" customClass="SubscribeViewController" customModule="SeSacWeek16" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ICN-gI-dnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bm-um-OBw">
+                                <rect key="frame" x="79" y="352" width="232" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDz-Sv-WTb">
+                                <rect key="frame" x="79" y="559" width="232" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qlT-Ly-tPK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="5bm-um-OBw" id="dDc-yO-PqV"/>
+                        <outlet property="label" destination="WDz-Sv-WTb" id="BsK-Jt-M5f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rah-pp-2KB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4606" y="771"/>
         </scene>
         <!--Shopping List View Controller-->
         <scene sceneID="j4Z-RB-KRn">
@@ -187,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xI-Rp-TCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2688" y="734"/>
+            <point key="canvasLocation" x="3440" y="4"/>
         </scene>
         <!--Rx Cocoa Example View Controller-->
         <scene sceneID="OHr-Px-vpR">
@@ -293,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8w-ZQ-3xu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2691" y="1495"/>
+            <point key="canvasLocation" x="1931" y="771"/>
         </scene>
         <!--Subject View Controller-->
         <scene sceneID="K1Z-Wt-b4V">
@@ -344,7 +376,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R8u-1e-6PH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4490.7692307692305" y="1493.6018957345971"/>
+            <point key="canvasLocation" x="3731" y="771"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="ncS-MF-URv">
@@ -438,7 +470,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jes-a5-cfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2687.6923076923076" y="-741.46919431279616"/>
+            <point key="canvasLocation" x="985" y="771"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TBL-GZ-pcl">
@@ -456,12 +488,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEs-RE-Qeo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3561.5384615384614" y="1493.6018957345971"/>
+            <point key="canvasLocation" x="2802" y="771"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
