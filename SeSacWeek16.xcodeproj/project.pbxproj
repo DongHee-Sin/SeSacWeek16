@@ -47,6 +47,8 @@
 		D0A5966A2900D139001AA178 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A596692900D139001AA178 /* NewsViewController.swift */; };
 		D0A5966C2900D246001AA178 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A5966B2900D246001AA178 /* NewsViewModel.swift */; };
 		D0A5966E2900D781001AA178 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A5966D2900D781001AA178 /* News.swift */; };
+		D0BBC9DD290A0811000EE71B /* SimpleValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BBC9DC290A0811000EE71B /* SimpleValidationViewController.swift */; };
+		D0BBC9DF290A22CA000EE71B /* SimpleValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BBC9DE290A22CA000EE71B /* SimpleValidationViewModel.swift */; };
 		D0DC524C2908CBB6003D7B6F /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DC524B2908CBB6003D7B6F /* SubscribeViewController.swift */; };
 		D0E18B2629099C4A00C53718 /* RXUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E18B2529099C4A00C53718 /* RXUser.swift */; };
 		D0E9A2E82903D1950017E14A /* GetPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E9A2E72903D1950017E14A /* GetPhoto.swift */; };
@@ -89,6 +91,8 @@
 		D0A596692900D139001AA178 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		D0A5966B2900D246001AA178 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		D0A5966D2900D781001AA178 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		D0BBC9DC290A0811000EE71B /* SimpleValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewController.swift; sourceTree = "<group>"; };
+		D0BBC9DE290A22CA000EE71B /* SimpleValidationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewModel.swift; sourceTree = "<group>"; };
 		D0DC524B2908CBB6003D7B6F /* SubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
 		D0E18B2529099C4A00C53718 /* RXUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXUser.swift; sourceTree = "<group>"; };
 		D0E9A2E72903D1950017E14A /* GetPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhoto.swift; sourceTree = "<group>"; };
@@ -266,6 +270,7 @@
 		D098DF3B290625A8004452D9 /* RX */ = {
 			isa = PBXGroup;
 			children = (
+				D0BBC9DB290A07A0000EE71B /* Validation */,
 				D0831AA8290912E50010D478 /* RXCocoa */,
 				D0831AA6290912BA0010D478 /* Subject */,
 				D0831AA7290912C90010D478 /* Subscribe */,
@@ -282,6 +287,15 @@
 				D0A5966D2900D781001AA178 /* News.swift */,
 			);
 			path = MVVMSample;
+			sourceTree = "<group>";
+		};
+		D0BBC9DB290A07A0000EE71B /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				D0BBC9DC290A0811000EE71B /* SimpleValidationViewController.swift */,
+				D0BBC9DE290A22CA000EE71B /* SimpleValidationViewModel.swift */,
+			);
+			path = Validation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +399,7 @@
 				D03A1E5D28FE390000B5CD2B /* SimpleCollectionViewController.swift in Sources */,
 				D064C4E92902EDF400A07762 /* Shopping.swift in Sources */,
 				D0A5966E2900D781001AA178 /* News.swift in Sources */,
+				D0BBC9DF290A22CA000EE71B /* SimpleValidationViewModel.swift in Sources */,
 				D064C4EB2902EE8B00A07762 /* ShoppingListViewModel.swift in Sources */,
 				D03A1E4C28FE2DB600B5CD2B /* SimpleTableViewController.swift in Sources */,
 				D078E2F92901073200BDB574 /* APIKeys.swift in Sources */,
@@ -396,6 +411,7 @@
 				D03A1E4828FE2DB600B5CD2B /* AppDelegate.swift in Sources */,
 				D0831AAE290919DC0010D478 /* SimplePickerView.swift in Sources */,
 				D0831AB929091CD70010D478 /* BaseViewController.swift in Sources */,
+				D0BBC9DD290A0811000EE71B /* SimpleValidationViewController.swift in Sources */,
 				D08CC0EA290995EF00319092 /* RXTableView.swift in Sources */,
 				D0831ABC290928140010D478 /* RXNumbersViewController.swift in Sources */,
 				D064C4E72902D23000A07762 /* ShoppingListViewController.swift in Sources */,
