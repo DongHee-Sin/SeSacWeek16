@@ -20,7 +20,7 @@ final class NewsViewModel {
     }()
     
     //var pageNumber: CObservable<String> = CObservable("")
-    var pageNumber = BehaviorSubject<String>(value: "3,000")
+    var pageNumber = PublishSubject<String>()
     
     //var news: CObservable<[News.NewsItem]> = CObservable(News.items)
     //var news = BehaviorSubject(value: News.items)
@@ -38,7 +38,7 @@ final class NewsViewModel {
         else { return }
         
         //pageNumber.value = result
-        pageNumber.onNext(text)
+        pageNumber.onNext(result)
     }
     
     

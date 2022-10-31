@@ -16,11 +16,13 @@
 		D03A1E5128FE2DB700B5CD2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03A1E5028FE2DB700B5CD2B /* Assets.xcassets */; };
 		D03A1E5428FE2DB700B5CD2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D03A1E5228FE2DB700B5CD2B /* LaunchScreen.storyboard */; };
 		D03A1E5D28FE390000B5CD2B /* SimpleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03A1E5C28FE390000B5CD2B /* SimpleCollectionViewController.swift */; };
+		D043B7E8290F76AB0044A48B /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D043B7E7290F76AB0044A48B /* RxAlamofire */; };
+		D043B7EB290F77530044A48B /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = D043B7EA290F77530044A48B /* Differentiator */; };
+		D043B7ED290F77530044A48B /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = D043B7EC290F77530044A48B /* RxDataSources */; };
 		D064C4E72902D23000A07762 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064C4E62902D23000A07762 /* ShoppingListViewController.swift */; };
 		D064C4E92902EDF400A07762 /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064C4E82902EDF400A07762 /* Shopping.swift */; };
 		D064C4EB2902EE8B00A07762 /* ShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064C4EA2902EE8B00A07762 /* ShoppingListViewModel.swift */; };
 		D071265B28FF9028001E6F56 /* DiffableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D071265A28FF9028001E6F56 /* DiffableCollectionViewController.swift */; };
-		D078E2F02901009400BDB574 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D078E2EF2901009400BDB574 /* Alamofire */; };
 		D078E2F3290104D300BDB574 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078E2F2290104D300BDB574 /* APIService.swift */; };
 		D078E2F52901057800BDB574 /* SearchPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = D078E2F42901057800BDB574 /* SearchPhoto.swift */; };
 		D078E2F7290106FE00BDB574 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D078E2F6290106FE00BDB574 /* .gitignore */; };
@@ -103,11 +105,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D043B7EB290F77530044A48B /* Differentiator in Frameworks */,
 				D098DF38290622B7004452D9 /* RxCocoa in Frameworks */,
 				D08CC0E62909739F00319092 /* Then in Frameworks */,
 				D078E2FC29010B3700BDB574 /* Kingfisher in Frameworks */,
+				D043B7E8290F76AB0044A48B /* RxAlamofire in Frameworks */,
+				D043B7ED290F77530044A48B /* RxDataSources in Frameworks */,
 				D098DF3A290622B7004452D9 /* RxSwift in Frameworks */,
-				D078E2F02901009400BDB574 /* Alamofire in Frameworks */,
 				D0831AB629091AB70010D478 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,12 +319,14 @@
 			);
 			name = SeSacWeek16;
 			packageProductDependencies = (
-				D078E2EF2901009400BDB574 /* Alamofire */,
 				D078E2FB29010B3700BDB574 /* Kingfisher */,
 				D098DF37290622B7004452D9 /* RxCocoa */,
 				D098DF39290622B7004452D9 /* RxSwift */,
 				D0831AB529091AB70010D478 /* SnapKit */,
 				D08CC0E52909739F00319092 /* Then */,
+				D043B7E7290F76AB0044A48B /* RxAlamofire */,
+				D043B7EA290F77530044A48B /* Differentiator */,
+				D043B7EC290F77530044A48B /* RxDataSources */,
 			);
 			productName = SeSacWeek16;
 			productReference = D03A1E4428FE2DB600B5CD2B /* SeSacWeek16.app */;
@@ -351,11 +357,12 @@
 			);
 			mainGroup = D03A1E3B28FE2DB600B5CD2B;
 			packageReferences = (
-				D078E2EE2901009400BDB574 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D078E2FA29010B3700BDB574 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				D098DF36290622B7004452D9 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				D0831AB429091AB70010D478 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				D08CC0E42909739F00319092 /* XCRemoteSwiftPackageReference "Then" */,
+				D043B7E6290F76AB0044A48B /* XCRemoteSwiftPackageReference "RxAlamofire" */,
+				D043B7E9290F77530044A48B /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = D03A1E4528FE2DB600B5CD2B /* Products */;
 			projectDirPath = "";
@@ -647,9 +654,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D078E2EE2901009400BDB574 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		D043B7E6290F76AB0044A48B /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "http://github.com/Alamofire/Alamofire";
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.1.2;
+			};
+		};
+		D043B7E9290F77530044A48B /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.0;
@@ -690,10 +705,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D078E2EF2901009400BDB574 /* Alamofire */ = {
+		D043B7E7290F76AB0044A48B /* RxAlamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D078E2EE2901009400BDB574 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
+			package = D043B7E6290F76AB0044A48B /* XCRemoteSwiftPackageReference "RxAlamofire" */;
+			productName = RxAlamofire;
+		};
+		D043B7EA290F77530044A48B /* Differentiator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D043B7E9290F77530044A48B /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = Differentiator;
+		};
+		D043B7EC290F77530044A48B /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D043B7E9290F77530044A48B /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
 		};
 		D078E2FB29010B3700BDB574 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

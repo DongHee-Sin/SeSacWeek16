@@ -50,10 +50,11 @@ final class NewsViewController: UIViewController {
     
     
     private func bindData() {
-//        viewModel.pageNumber.bind { value in
-//            self.numberTextField.text = value
-//        }
-//
+        viewModel.pageNumber.bind { value in
+            self.numberTextField.text = value
+        }
+        .disposed(by: disposeBag)
+
 //        viewModel.news.bind { items in
 //            var snapshot = NSDiffableDataSourceSnapshot<Int, News.NewsItem>()
 //            snapshot.appendSections([0])
