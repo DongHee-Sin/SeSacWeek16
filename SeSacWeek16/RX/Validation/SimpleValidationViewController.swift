@@ -38,13 +38,51 @@ class SimpleValidationViewController: UIViewController {
     // MARK: - Bind
     // Stream == Sequence (같은 의미, 흐름)
     private func bind() {
-        // viewModel.validText.accept("1234")
+        
+        // MARK: - Input/Output (개선)
+        let input = SimpleValidationViewModel.Input(text: nameTextField.rx.text, tap: stepButton.rx.tap)
+        let output = viewModel.transform(input: input)
+        
+        output.text
+            .drive(validationLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        output.validation
+            .bind(to: stepButton.rx.isEnabled, validationLabel.rx.isHidden)
+            .disposed(by: disposeBag)
+    
+        output.validation
+            .withUnretained(self)
+            .bind { (vc, value) in
+                let color: UIColor = value ? .systemPink : .lightGray
+                vc.stepButton.backgroundColor = color
+            }
+            .disposed(by: disposeBag)
+        
+        output.validation
+            .bind { _ in
+                print("SHOW ALERT")
+            }
+            .disposed(by: disposeBag)
+        
+        output.tap
+            .bind { _ in
+                print("SHOW ALERT")
+            }
+            .disposed(by: disposeBag)
+        
+        
+        
+        
+        // MARK: - Input/Output (Before)
+        // Output
         viewModel.validText
             .asDriver()
             .drive(validationLabel.rx.text)
             .disposed(by: disposeBag)
         
-        
+
+        // Input
         let validation = nameTextField.rx.text.orEmpty
             .map { $0.count >= 8 }
             .share()  // 10.25 강의자료에 설명이 되어있음
@@ -65,6 +103,7 @@ class SimpleValidationViewController: UIViewController {
             .disposed(by: disposeBag)
         
         
+        // Input
         stepButton.rx.tap
             .bind { _ in
                 print("SHOW ALERT")

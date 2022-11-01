@@ -23,7 +23,6 @@ class SubscribeViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     lazy var dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Int>> { dataSource, tableView, indexPath, item in
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
         cell.textLabel?.text = "\(item)"
         return cell
@@ -52,10 +51,8 @@ class SubscribeViewController: UIViewController {
     private func testRXAlamofire() {
         let url = APIKey.searchURL + "apple"
         request(.get, url, headers: ["Authorization": APIKey.authorization])
-            .debug()
             .data()
             .decode(type: SearchPhoto.self, decoder: JSONDecoder())
-            .debug()
             .subscribe { value in
                 print(value.results[0].likes)
             }

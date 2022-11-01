@@ -42,36 +42,43 @@ final class SubjectViewController: UIViewController {
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ContackCell")
         
-        viewModel.list.bind(to: tableView.rx.items(cellIdentifier: "ContackCell", cellType: UITableViewCell.self)) { (row, element, cell) in
-            cell.textLabel?.text = "\(element.name) : \(element.age)세 : \(element.number)"
-        }
-        .disposed(by: disposeBag)
         
-        addButton.rx.tap
+        // MARK: - Input Output
+        let input = SubjectViewModel.Input(addTap: addButton.rx.tap, resetTap: resetButton.rx.tap, newTap: newButton.rx.tap, searchText: searchBar.rx.text)
+        let output = viewModel.transfrom(input: input)
+        
+        
+        output.list
+            .drive(tableView.rx.items(cellIdentifier: "ContackCell", cellType: UITableViewCell.self)) { (row, element, cell) in
+                cell.textLabel?.text = "\(element.name) : \(element.age)세 : \(element.number)"
+            }
+            .disposed(by: disposeBag)
+        
+        
+        // VC -> VM (Input)
+        output.addTap
             .withUnretained(self)
             .subscribe { (vc, _) in
                 vc.viewModel.fetchData()
             }
             .disposed(by: disposeBag)
         
-        resetButton.rx.tap
+        output.resetTap
             .withUnretained(self)
             .subscribe { (vc, _) in
                 vc.viewModel.resetData()
             }
             .disposed(by: disposeBag)
         
-        newButton.rx.tap
+        output.newTap
             .withUnretained(self)
             .subscribe { (vc, _) in
                 vc.viewModel.newData()
             }
             .disposed(by: disposeBag)
         
-        searchBar.rx.text.orEmpty
-            .distinctUntilChanged()  // 같은 값을 받지 않음 (불필요한 동작(?) 방지)
+        output.searchText
             .withUnretained(self)
-            .debounce(RxTimeInterval.seconds(1), scheduler: MainScheduler.instance)  // Wait
             .subscribe { (vc, query) in
                 print("======\(query)")
                 vc.viewModel.filterData(query: query)
